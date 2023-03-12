@@ -6,12 +6,18 @@ def zapytaj():
     return response.json()
 
 print('Kalkulator Walut')
-waluta=input('Podaj rodzaj Waluty: ')
+waluta=input('Podaj symbol Waluty: ')
 dane=zapytaj()
-data=dane['rates'] [0]['effectiveDate']
+
+data=dane['rates'][0]['effectiveDate']
 rodzaj=dane['currency']
 kwota=dane['rates'][0]['mid']
-print(data)
-print(rodzaj)
-print(float(kwota))
+def wyswietl():
+    print(data)
+    print(rodzaj)
+    print(float(kwota))
+wyswietl()
+oblicz=float(input('podaj kwotę jaką chcesz przeliczyć na zł: '))
+wynik=oblicz*kwota
+print(wynik,'zł')
 #edycjaa
