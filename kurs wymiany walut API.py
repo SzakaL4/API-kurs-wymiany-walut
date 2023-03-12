@@ -14,3 +14,4 @@ kwota=dane['rates'][0]['mid']
 print(data)
 print(rodzaj)
 print(float(kwota))
+#edycjaa
